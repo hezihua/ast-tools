@@ -3,5 +3,5 @@
   "outputDirectory": "packages/ast-explorer-web/.next",
   "framework": "nextjs",
   "installCommand": "pnpm install",
-  "ignoreCommand": "git diff --quiet HEAD^ HEAD ./packages/ast-explorer-web ./packages/core"
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD ./packages/ast-explorer-web ./packages/core || exit 1"
 }
