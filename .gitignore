@@ -127,3 +127,13 @@ dist
 .vscode/
 *.swp
 *.swo
+
+# pnpm
+pnpm-lock.yaml
+
+# monorepo specific
+packages/*/dist
+packages/*/build
+packages/*/.next
+packages/*/out
+packages/*/node_modules

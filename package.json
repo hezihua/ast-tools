@@ -1,24 +1,21 @@
 {
   "name": "ast-tools",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "AST tools monorepo",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "pnpm --filter ast-explorer-web dev",
+    "build": "pnpm -r build",
+    "build:core": "pnpm --filter @ast-tools/core build",
+    "build:web": "pnpm --filter ast-explorer-web build",
+    "start": "pnpm --filter ast-explorer-web start",
+    "lint": "pnpm -r lint"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
-  "dependencies": {
-    "rehype-parse": "^9.0.1",
-    "remark-parse": "^11.0.0",
-    "unified": "^11.0.5",
-    "unist-util-visit": "^5.1.0"
-  },
   "devDependencies": {
-    "@types/node": "^25.6.0",
-    "tsx": "^4.21.0",
-    "typescript": "^6.0.3"
+    "typescript": "^5.0.0"
   }
 }
