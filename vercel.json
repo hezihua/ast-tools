@@ -2,5 +2,5 @@
   "buildCommand": "pnpm run build:web",
   "outputDirectory": "packages/ast-explorer-web/.next",
   "framework": "nextjs",
-  "installCommand": "pnpm install"
+  "installCommand": "corepack enable pnpm && pnpm install"
 }
