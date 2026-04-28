@@ -4,13 +4,16 @@
   "description": "AST tools monorepo",
   "private": true,
   "scripts": {
-    "dev": "pnpm --filter ast-explorer-web dev",
-    "build": "pnpm -r build",
-    "build:core": "pnpm --filter @ast-tools/core build",
-    "build:web": "pnpm --filter ast-explorer-web build",
-    "start": "pnpm --filter ast-explorer-web start",
-    "lint": "pnpm -r lint"
+    "dev": "npm run dev -w ast-explorer-web",
+    "build": "npm run build -ws",
+    "build:core": "npm run build -w @ast-tools/core",
+    "build:web": "npm run build -w ast-explorer-web",
+    "start": "npm run start -w ast-explorer-web",
+    "lint": "npm run lint -ws"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -18,7 +21,7 @@
   "engines": {
     "node": ">=20.0.0"
   },
-  "packageManager": "pnpm@9.15.4",
+  "packageManager": "npm@10.8.2",
   "devDependencies": {
     "typescript": "^5.0.0"
   }
