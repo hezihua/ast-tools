@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import Editor from '@monaco-editor/react';
 import dynamic from 'next/dynamic';
-import { parseMarkdown, parseHtml } from '@ast-tools/core';
+import { parseMarkdown } from '@/lib/markdown-ast';
+import { parseHtml } from '@/lib/html-ast';
 
 // react-json-view 需要客户端渲染
 const ReactJson = dynamic(() => import('react-json-view'), { ssr: false });

@@ -1,6 +1,5 @@
 {
-  "buildCommand": "npm run build:web",
-  "outputDirectory": "packages/ast-explorer-web/.next",
+  "buildCommand": "pnpm run build",
   "framework": "nextjs",
-  "installCommand": "npm install --legacy-peer-deps"
+  "installCommand": "pnpm install"
 }

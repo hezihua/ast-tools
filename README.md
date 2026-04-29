@@ -1,51 +1,36 @@
-# AST Tools
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-这个项目包含了两个用于解析和遍历抽象语法树 (AST) 的工具：
-1. **Markdown AST** (`src/markdown-ast.ts`)
-2. **HTML AST** (`src/html-ast.ts`)
+## Getting Started
 
-## 依赖
-本项目使用 Node.js，并基于 `unified` 生态系统构建：
-- `remark-parse` 用于解析 Markdown (mdast)
-- `rehype-parse` 用于解析 HTML (hast)
-- `unist-util-visit` 用于遍历 AST 节点
+First, run the development server:
 
-## 安装
 ```bash
-npm install
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## 运行示例
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### 1. Markdown AST 工具
-解析 Markdown 字符串，并提取其中的文本节点。
-```bash
-npx tsx src/markdown-ast.ts
-```
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-### 2. HTML AST 工具
-解析 HTML 字符串，并提取其中的标签名。
-```bash
-npx tsx src/html-ast.ts
-```
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## API 使用
-你可以在其他文件中导入并使用它们：
+## Learn More
 
-```typescript
-import { parseMarkdown, traverseMarkdownAst } from './src/markdown-ast.js';
-import { parseHtml, traverseHtmlAst } from './src/html-ast.js';
+To learn more about Next.js, take a look at the following resources:
 
-// Markdown
-const mdAst = parseMarkdown('# Title');
-traverseMarkdownAst(mdAst, (node) => {
-  console.log(node.type);
-});
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-// HTML
-const htmlAst = parseHtml('<div>Hello</div>');
-traverseHtmlAst(htmlAst, (node) => {
-  console.log(node.type);
-});
-```
-# ast-tools
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

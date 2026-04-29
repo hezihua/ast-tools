@@ -1,28 +1,38 @@
 {
-  "name": "ast-tools",
-  "version": "1.0.0",
-  "description": "AST tools monorepo",
+  "name": "ast-explorer-web",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm run dev -w ast-explorer-web",
-    "build": "npm run build -ws",
-    "build:core": "npm run build -w @ast-tools/core",
-    "build:web": "npm run build -w ast-explorer-web",
-    "start": "npm run start -w ast-explorer-web",
-    "lint": "npm run lint -ws"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "workspaces": [
-    "packages/*"
-  ],
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
+  "dependencies": {
+    "@monaco-editor/react": "^4.6.0",
+    "next": "15.2.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-json-view": "^1.21.3",
+    "rehype-parse": "^9.0.1",
+    "remark-parse": "^11.0.0",
+    "unified": "^11.0.5",
+    "unist-util-visit": "^5.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/hast": "^3.0.4",
+    "@types/mdast": "^4.0.4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
   "engines": {
     "node": ">=20.0.0"
   },
-  "packageManager": "npm@10.8.2",
-  "devDependencies": {
-    "typescript": "^5.0.0"
-  }
+  "packageManager": "pnpm@9.15.4"
 }

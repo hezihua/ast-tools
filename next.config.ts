@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  transpilePackages: ["@ast-tools/core"],
+  /* config options here */
 };
 
 export default nextConfig;
